@@ -12,6 +12,12 @@ describe LicenseFinder::License::Definitions do
   end
 end
 
+describe LicenseFinder::License, 'AGPLv3' do
+  it 'should be recognized' do |_e|
+    expect(described_class.find_by_name('AGPLv3').url).to be
+  end
+end
+
 describe LicenseFinder::License, 'Apache2' do
   it 'should be recognized' do |_e|
     expect(described_class.find_by_name('Apache2').url).to be

@@ -7,6 +7,7 @@ module LicenseFinder
 
       def all
         [
+          agplv3,
           apache1_1,
           apache2,
           bsd,
@@ -40,6 +41,14 @@ module LicenseFinder
       end
 
       private
+
+      def agplv3
+        License.new(
+          short_name: 'AGPLv3',
+          other_names: ['AGPL V3', 'agpl-v3', 'GNU AFFERO GENERAL PUBLIC LICENSE Version 3'],
+          url: 'https://www.gnu.org/licenses/agpl-3.0.txt'
+        )
+      end
 
       def apache1_1
         License.new(
